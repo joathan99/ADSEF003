@@ -18,10 +18,11 @@ public class Objeto : MonoBehaviour
 
     private void OnMouseDown()
     {
+        //Cuando hagamos clic accederemos a los datos que nos proporciona dicho objeto y se mostraran en pantalla
         io.OpenPanel();
         io.ObjName.text = info.Name;
         io.rarityLevel.text = info.Rarity.ToString();
-        io.objImage.GetComponent<RawImage>().texture = info.Icon;
+        io.objImage.GetComponent<Image>().sprite = info.Icon;
     }
 
 

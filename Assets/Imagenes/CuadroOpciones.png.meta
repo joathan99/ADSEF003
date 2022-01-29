@@ -1,7 +1,10 @@
 fileFormatVersion: 2
 guid: 1b8abcdb46a5f2944817d0ed0bcb68cb
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -2229830404545701098
+    second: CuadroOpciones_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -113,7 +116,28 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: CuadroOpciones_0
+      rect:
+        serializedVersion: 2
+        x: 1187
+        y: 653
+        width: 249
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61b10bbaf0d0e01e0800000000000000
+      internalID: -2229830404545701098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

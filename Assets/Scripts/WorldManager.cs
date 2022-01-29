@@ -17,9 +17,9 @@ public class WorldManager : MonoBehaviour
 
     void Objects()
     {
-        //Obtendremos los datos de nuestro terrain para posicionarlos sobre el terrain que tenemos
+        //Obtendremos los datos donde se colocaran los objetos aleatoriamente y dejaremos un espacio entre ellos para que se queden muy pegados o uno encima del otro
         TerrainData terrainData = terrain.terrainData;
-        int objectsSpacing = 10;
+        int objectsSpacing = 100;
         for(int z = 0; z < terrainData.size.z; z += objectsSpacing)
         {
             for (int x = 0; x < terrainData.size.x; x += objectsSpacing)

@@ -9,6 +9,7 @@ using UnityEngine;
 //Usaremos ScriptableObject ppara almacenar datos compartidos independiente de instancias de scripts.
 public class Objetos : ScriptableObject
 {
+
     public enum RARITY { Comun, Raro, Curativo}
 
     [SerializeField]
@@ -18,11 +19,11 @@ public class Objetos : ScriptableObject
     RARITY _objectRarity;
 
     [SerializeField]
-    Texture _icon;
+    Sprite _icon;
 
     //Contructores para crear el objeto
 
     public string Name { get { return _objectName; } }
     public RARITY Rarity { get { return _objectRarity; } }
-    public Texture Icon { get { return _icon; } }
+    public Sprite Icon { get { return _icon; } }
 }
