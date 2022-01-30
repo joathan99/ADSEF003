@@ -6,14 +6,14 @@ using UnityEngine.UI;
 public class Item : MonoBehaviour
 {
     public Event dropped;
-    public Image icon;
-    // Start is called before the first frame update
+    public SpriteRenderer icon;
+
     void Start()
     {
         dropped.Occurred(this.gameObject);
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         
