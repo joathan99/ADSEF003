@@ -35,11 +35,12 @@ public class Radar : MonoBehaviour
             ro.icon.transform.position = new Vector3(radarPos.x + rt.pivot.x, radarPos.z + rt.pivot.y, -0.5f) + this.transform.position;
         }
     }
-    // Update is called once per frame
+
     void Update()
     {
         DrawRadarDots();
     }
+
     public void ItemDropped(GameObject go)
     {
         RegisterRadarObject(go, go.GetComponent<Item>().icon);

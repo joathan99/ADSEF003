@@ -15,10 +15,13 @@ public class Spawn : MonoBehaviour
     void Start()
     {
         terrainData = terrain.terrainData;
-        InvokeRepeating("CreateNormal", 1, 1);
-        InvokeRepeating("CreateCuracion", 1, 1);
-        InvokeRepeating("CreatePeligro", 1, 1);
+        Invoke("CreateNormal", 10);
+        Invoke("CreateCuracion", 10);
+        Invoke("CreatePeligro", 10);
+
+
     }
+
 
     void CreateNormal()
     {

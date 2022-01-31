@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Chekpoint
   - InfoObjeto
+  - Objeto
   layers:
   - Default
   - TransparentFX
