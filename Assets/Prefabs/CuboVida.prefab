@@ -15,18 +15,6 @@ MonoBehaviour:
   info: {fileID: 11400000, guid: 58fb15536432760488952c34262246d6, type: 2}
   dropped: {fileID: 11400000, guid: 1a9de64460951c043beb1236a95d7319, type: 2}
   icon: {fileID: 3413566664588288711, guid: dbd8e62217a7d55458166a484e22cd1c, type: 3}
---- !u!114 &4067409726896881660
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7453131534732215982}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35dd6d8d3618b2b44836a9251dcf9587, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &7759630095185411071
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -85,6 +73,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b9d7fcbb06e73a140b2a710ea22a571d, type: 3}
       propertyPath: m_Name
       value: CuboVida
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b9d7fcbb06e73a140b2a710ea22a571d, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9d7fcbb06e73a140b2a710ea22a571d, type: 3}

@@ -5,9 +5,13 @@ using UnityEngine;
 public class Spawn : MonoBehaviour
 {
 
-    public GameObject NormalPrefab;
-    public GameObject PeligroPrefab;
-    public GameObject CuracionPrefab;
+    public GameObject[] ObjectsPrefab;
+
+    public GameObject exitPrefab;
+
+    //public GameObject NormalPrefab;
+    //public GameObject PeligroPrefab;
+    //public GameObject CuracionPrefab;
     public Terrain terrain;
     TerrainData terrainData;
 
@@ -15,38 +19,65 @@ public class Spawn : MonoBehaviour
     void Start()
     {
         terrainData = terrain.terrainData;
-        Invoke("CreateNormal", 10);
-        Invoke("CreateCuracion", 10);
-        Invoke("CreatePeligro", 10);
+        //Invoke("CreateNormal", 10);
+        //Invoke("CreateCuracion", 10);
+        //Invoke("CreatePeligro", 10);
+        InvokeRepeating("CreateObjects", 1, 50);
+        Invoke("CreateSalida", 1);
 
 
     }
 
 
-    void CreateNormal()
+
+
+
+    void CreateObjects()
     {
         int x = (int)Random.Range(0, terrainData.size.x);
         int z = (int)Random.Range(0, terrainData.size.z);
         Vector3 pos = new Vector3(x, 0, z);
         pos.y = terrain.SampleHeight(pos) + 1.2f;
-        GameObject normal = Instantiate(NormalPrefab, pos, Quaternion.identity);
+        int i = Random.Range(0, ObjectsPrefab.Length);
+        GameObject Ob = Instantiate(ObjectsPrefab[i], pos, Quaternion.identity);
     }
 
-    void CreateCuracion()
+    void CreateSalida()
     {
         int x = (int)Random.Range(0, terrainData.size.x);
         int z = (int)Random.Range(0, terrainData.size.z);
         Vector3 pos = new Vector3(x, 0, z);
         pos.y = terrain.SampleHeight(pos) + 1.2f;
-        GameObject curacion = Instantiate(CuracionPrefab, pos, Quaternion.identity);
+        GameObject exit = Instantiate(exitPrefab, pos, Quaternion.identity);
     }
 
-    void CreatePeligro()
-    {
-        int x = (int)Random.Range(0, terrainData.size.x);
-        int z = (int)Random.Range(0, terrainData.size.z);
-        Vector3 pos = new Vector3(x, 0, z);
-        pos.y = terrain.SampleHeight(pos) + 1.2f;
-        GameObject peligro = Instantiate(PeligroPrefab, pos, Quaternion.identity);
-    }
+
+
+
+    //void CreateNormal()
+    //{
+    //    int x = (int)Random.Range(0, terrainData.size.x);
+    //    int z = (int)Random.Range(0, terrainData.size.z);
+    //    Vector3 pos = new Vector3(x, 0, z);
+    //    pos.y = terrain.SampleHeight(pos) + 1.2f;
+    //    GameObject normal = Instantiate(NormalPrefab, pos, Quaternion.identity);
+    //}
+
+    //void CreateCuracion()
+    //{
+    //    int x = (int)Random.Range(0, terrainData.size.x);
+    //    int z = (int)Random.Range(0, terrainData.size.z);
+    //    Vector3 pos = new Vector3(x, 0, z);
+    //    pos.y = terrain.SampleHeight(pos) + 1.2f;
+    //    GameObject curacion = Instantiate(CuracionPrefab, pos, Quaternion.identity);
+    //}
+
+    //void CreatePeligro()
+    //{
+    //    int x = (int)Random.Range(0, terrainData.size.x);
+    //    int z = (int)Random.Range(0, terrainData.size.z);
+    //    Vector3 pos = new Vector3(x, 0, z);
+    //    pos.y = terrain.SampleHeight(pos) + 1.2f;
+    //    GameObject peligro = Instantiate(PeligroPrefab, pos, Quaternion.identity);
+    //}
 }

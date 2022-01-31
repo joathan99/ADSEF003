@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Item : MonoBehaviour
 {
+    //Hacemos referencia para poder obtener datos de los diferentes spcrits y poder usarlos en este.
     [SerializeField] Objetos info;
     InfoObjetos io;
 

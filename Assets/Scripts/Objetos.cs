@@ -9,9 +9,11 @@ using UnityEngine;
 //Usaremos ScriptableObject ppara almacenar datos compartidos independiente de instancias de scripts.
 public class Objetos : ScriptableObject
 {
-
+    //colocamos una lista las cual podremos asignar despues a cada objeto.
     public enum RARITY { Comun, Raro, Curativo}
 
+
+    //Serializamos para guardar los datos, para acceder a ellos cuando sea necesario.
     [SerializeField]
     string _objectName;
 

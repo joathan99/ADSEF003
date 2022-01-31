@@ -1,9 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerMove : MonoBehaviour
 {
+    public Animator transAnim;
+    public string NextScene;
+
     public CharacterController controller;
     public float speed = 5;
 
@@ -12,6 +17,8 @@ public class PlayerMove : MonoBehaviour
     float turnSmoothVelocity;
 
     public Transform cam;
+    //public int[] can;
+    //public Text[] caRe;
 
     void Update()
     {
@@ -37,5 +44,27 @@ public class PlayerMove : MonoBehaviour
             controller.Move(moveDir.normalized * speed * Time.deltaTime);
         }
 
+    }
+
+    
+
+    private void OnTriggerEnter(Collider other)
+    {
+        //Creamos la condicion para que cuando el jugador entre en el trigger, cargue la siguiente escena.
+        if (other.tag == "Salida")
+        {
+            StartCoroutine(nextScene());
+        }
+    }
+
+
+
+
+
+    IEnumerator nextScene()
+    {
+        transAnim.SetTrigger("End");
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene(NextScene, LoadSceneMode.Single);
     }
 }
