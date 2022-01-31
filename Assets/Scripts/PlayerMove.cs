@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMove : MonoBehaviour
 {
+    public GameObject PanelTrans;
     public Animator transAnim;
     public string NextScene;
 
@@ -63,6 +64,7 @@ public class PlayerMove : MonoBehaviour
 
     IEnumerator nextScene()
     {
+        PanelTrans.SetActive(true);
         transAnim.SetTrigger("End");
         yield return new WaitForSeconds(2);
         SceneManager.LoadScene(NextScene, LoadSceneMode.Single);
