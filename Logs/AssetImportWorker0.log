@@ -184,3 +184,4 @@ Received Import Request.
 Start importing Assets/3DModelos/Suelo/Suelo.mat using Guid(c14b90167e94d9b4fb779d0bf7062941) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d17bacb386594118e5ec246dbb2601b') in 0.018271 seconds 
   Import took 0.020702 seconds .
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
